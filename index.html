@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ICT Matrix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+#vanta-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+    /* Matrix Background Effect */
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      color: #00ff00;
+      background: black;
+      overflow-x: hidden;
+    }
+
+    /* Create matrix effect */
+    .matrix-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://media.giphy.com/media/xT0xeJpnvAIrHzY2lC/giphy.gif') no-repeat center center fixed;
+      background-size: cover;
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid #00ff00;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .cta-btn {
+      background: #00ff00;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #00ff00;
+    }
+
+    .main-content {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .main-content h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px #00ff00;
+    }
+
+    .typed-text {
+      font-size: 1.5em;
+      margin: 20px 0;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    .button-group {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn, .vip-btn {
+      font-size: 1.2em;
+    }
+
+    .vip-btn {
+      background: #ff0000;
+      color: white;
+      box-shadow: 0 0 10px #ff0000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.8);
+      border-top: 1px solid #00ff00;
+      color: #00ff00;
+    }
+
+    /* For mobile */
+    @media screen and (max-width: 600px) {
+      .main-content h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="vanta-bg"></div>
+
+ <!-- Matrix Background -->
+
+<header>
+  <img src="logo.png" alt="ICT Matrix Logo"/>
+  <a href="#buy" class="cta-btn">Buy Course</a>
+</header>
+
+<div class="main-content">
+  <h1>Welcome to the ICT Matrix</h1>
+  <div class="typed-text"></div>
+  <p>Decode the market. Join the revolution. Trade the Matrix way.</p>
+
+  <div class="button-group">
+    <a href="#ebook" class="cta-btn">📘 Free E-book</a>
+    <a href="#vip" class="vip-btn">💎 VIP Access</a>
+  </div>
+</div>
+
+<section id="ebook">
+  <h2>📘 Download Your Free E-book</h2>
+  <p>Learn ICT core concepts, setups, and strategy.</p>
+  <a href="ebook.pdf" class="cta-btn" download>Download Now</a>
+</section>
+
+<section id="vip">
+  <h2>💎 Become a VIP Member</h2>
+  <p>Private mentorship, full access to advanced training, and exclusive resources.</p>
+  <a href="#buy" class="vip-btn">Join VIP</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 ICT Matrix. All rights reserved.</p>
+  <p>Contact: info@ictmatrix.com</p>
+</footer>
+
+<!-- Typed.js Text Effect -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  new Typed(".typed-text", {
+    strings: ["Enter the Market Matrix...", "Decode the Code.", "Trade the Truth."],
+    typeSpeed: 80,
+    backSpeed: 40,
+    loop: true
+  });
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+<script>
+  VANTA.NET({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x00ff00,
+    backgroundColor: 0x000000
+  })
+</script>
+
+</body>
+</html>
